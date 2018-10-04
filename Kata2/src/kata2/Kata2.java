@@ -13,11 +13,9 @@ public class Kata2 {
 		
 		for(final int n : data) {
 			
-			if(histogram.containsKey(n)) {
-				histogram.put(n ,histogram.get(n)+1);
-			} else {
-				histogram.put(n, 1);
-			}
+			final Integer value = histogram.get(n);
+			
+			histogram.put(n, value == null ? 1 : value+1);
 			
 		}
 		
