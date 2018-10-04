@@ -6,11 +6,12 @@ public class Kata2 {
 	
 	public static void main(String[] args) {
 		
-		final Integer[] data = {3,1,1,2,1,3};
+		final String[] data = {"Java","C++","C#","Java","JavaScript","C#","Java",
+				"Python","C++","C++","Ruby","JavaScript"};
 		
-		Histogram<Integer> histogram = new Histogram<>(data);
+		Histogram<String> histogram = new Histogram<>(data);
 		
-		final Map<Integer, Integer> results = histogram.getHistogram();
+		final Map<String, Integer> results = histogram.getHistogram();
 		
 		results.forEach((k,v) -> System.out.println(k + "->" + v));
 		
